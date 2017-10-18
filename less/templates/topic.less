@@ -1,0 +1,200 @@
+.breadcrumbs {
+        padding: 20px 0px 65px 0px;
+        color: @grey;
+        font-size: 14px;
+        a {
+        font-size: 14px;
+        color: #959595;
+        text-decoration: none;
+            &:after {
+                content: " • ";
+                letter-spacing: 5px;
+            }
+            &:hover {
+                color: #c9c9c9;
+            }
+        }
+    }
+
+.topic {
+    .sidebar-banner {
+        margin-bottom: 30px;
+    }
+    .content {
+        padding-top: 0px;
+        padding: 0px;
+    }
+    .article-image .article-wrapper .article-inner h2 a {
+    line-height: 36px;
+    }
+    
+    .ad-sidebar-topic,.sponsor-ad {
+        text-align: center;
+    }
+    .ad-sidebar-topic img,.sponsor-ad img {
+        max-width: 100%;
+    }
+    .category{
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 13px;
+        a {
+            text-decoration: none;
+            &:after{
+                content: " •";
+                letter-spacing: 8px;
+            }
+            &:last-child {
+                &:after {
+                    content: "";
+                }
+            }
+            &:hover {
+                color: #337ab7;
+            }
+        }
+    }
+    .leaderboard {
+        margin: 0px;
+        margin-bottom: 50px;
+        margin-top: -10px;
+        padding-top: 0px;
+    }
+    
+    .header-article {
+        margin-top: 15px;
+        padding-bottom: 80px;
+        line-height: 25px;
+        .box1 {
+            padding-right: 30px;
+        }
+        .box2 {
+            padding-left: 30px;
+        }
+    }
+    .topic-header {
+        font-size: 16px;
+        color: #5d5d5d;
+        padding-left: 40px;
+        padding-right: 40px;
+        
+        h1 {
+            letter-spacing: -1px;
+            font-size: 35px;
+            color: black;
+            margin: 0px;
+            padding-bottom: 15px;
+        }
+        
+        .topics-menu-wrapper {
+            .topics-menu-label {
+                color: @black;
+                padding-left: 0px;
+                padding-right: 10px;
+                display: inline-block;
+            }
+
+            ul {
+                margin: 0px;
+                padding: 0px;
+                display: inline-block;
+                li {
+                    padding: 5px 0px;
+                    display: inline-block;
+                    color: #5d5d5d;
+
+                    &:last-child {
+                        &:after {
+                        content: "";
+                    }
+                    }
+                    &:after {
+                        content: " | ";
+                        letter-spacing: 5px;
+                    }
+                    a {
+                    text-decoration: none;
+                    color: #5d5d5d;
+                    &:hover {
+                        color: #0075bc;
+                        text-decoration: underline;
+                        }
+                    }  
+                }
+            }
+        }
+         
+    }
+    .related-topic{
+        h1 {
+            color: black;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            margin: 0px 0px 10px 0px;
+        }
+        ul {
+            margin-bottom: 35px;
+            padding: 0px;
+            font-size: 16px;
+            line-height: 25px;
+            li {
+                display: inline-block;
+                &:after {
+                        content: " • ";
+                        letter-spacing: 5px;
+                    }
+                    &:last-child {
+                    &:after {
+                        content: "";
+                    }
+                }
+                a {
+                    color:#5d5d5d;
+                    text-decoration: none;
+                    &:hover {
+                        color: #959595;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: @screen-md-max) and (min-width: @screen-md-min){
+    .topic {
+        .image {
+            width: 37%;
+        }
+        .text {
+            width: 63%;
+        }
+        
+        .popular-stories ul li {
+            padding: 25px;
+            padding-left: 35px;
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max){
+    .topic {
+        
+        .topic-header {
+            padding-left: 15px;
+            h1 {
+                font-size: 30px;
+            }
+        }
+        .header-article {
+            padding-bottom: 80px;
+            .box1 {
+                padding-right: 0px;
+                padding-bottom: 50px;
+            }
+            .box2 {
+                padding-left: 15px;
+            }
+        }
+    }
+
+}

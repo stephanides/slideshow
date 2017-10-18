@@ -1,0 +1,516 @@
+.quotes-content {
+        
+    h1,h2,h3 {
+        color: @black;
+    }
+    p, ul li {
+        color: @slide_par;
+        line-height: 1.5;
+        font-size: 16px;
+    }
+    
+    &.content {
+        padding: 0px;
+    }
+    
+    .header-article {
+        padding-bottom: 60px;
+        
+        p {
+            line-height: 1.56;
+        }
+    }
+    
+    .content-padding {
+        .topic-header {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    
+    .topic-header {
+        .topics-menu-wrapper {
+            ul {
+                li {
+                    padding: 0px 0px 3px;                   
+                    
+                    &:first-child {
+                        &:after {
+                            content: '';
+                        }
+                    }
+                    
+                    &:after {
+                        letter-spacing: 10px;
+                    }
+                    
+                    .topics-menu-label {
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .slideshow-wrapper {
+        margin-bottom: 20px;
+        
+        .slide-image {
+            .wrapper {
+                background: rgba(0, 0, 0, 0.3);
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                
+                .pullquote {
+                    width: auto;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background: none;
+                    text-align: left;
+                    width: 70%;
+                    
+                    .quote {
+                        opacity: .3;
+                        top: 5px;
+                        left: -10px;
+                        font-size: 115px;
+                    }
+                    
+                    .quote-text {
+                        p {
+                            color: @white;
+                            width: 100%;
+                            margin-bottom: 30px;
+                            padding: 30px 20px 0px 15px;
+                        }
+                        
+                        .author {
+                            padding: 0px 15px;
+                            color: @white;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                            margin-bottom: 15px;
+                            font-size: 13px;
+                        }
+                        .place {
+                            padding: 0px 15px;
+                            color: @white;
+                            letter-spacing: 1px;
+                            margin-bottom: 30px;
+                            opacity: .7;
+                            font-size: 13px;
+                        }
+                    }
+                    
+                    .share-quote {
+                        margin-left: 15px;
+                        
+                        a.share-button {
+                            i {
+                                width: 43px;
+                                height: 43px;
+                                font-size: 25px;
+                                line-height: 30px;
+                                
+                                &:hover {
+                                    background-color: @hover_blue;
+                                }
+                            }
+                            
+                            
+                        }
+                        
+                        .social-wrapper {
+                            height: 43px;
+                            margin-left: 43px;
+                            
+                            a {
+                                width: 43px;
+                                height: 43px;
+                                font-size: 25px;
+                                line-height: 27px;
+                                
+                                &:hover {
+                                    background-color: @hover_blue;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        .carousel-control {
+            top:50%;
+            z-index: 9999;
+            opacity: 0.4;
+            width: auto;
+            bottom: auto;
+            margin-top: -40px;
+            
+            img {
+                width: 35px;
+            }
+
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
+            }
+
+            &.left {
+                left: 20px;
+            }
+            &.right {
+                right: 20px;
+            }
+        }
+    }
+    
+    .quotes-testimonial {
+        padding-left: 0px;
+        padding-right: 0px;
+        background: @light_blue;
+        color: @white;
+        text-align: center;
+        padding: 0px 0px 40px 0px;
+        margin-bottom: 20px;
+        
+        .quote-title {
+            text-transform: uppercase;
+            margin: 0px 0px 60px;
+            padding: 20px 15px;
+            letter-spacing: 1px;
+            font-weight: 600;
+            border-bottom: 1px solid @brand_light_blue;
+            font-size: 13px;
+        }
+        
+        .pullquote {
+            float: none;
+            margin-bottom: 0px;
+            
+            .quote-text {
+                width: 75%;
+                margin: 0 auto 50px;
+                position: relative;
+                
+                .text-wrapper {
+                    padding: 20px;
+                    
+                    p {
+                        display: inline-block;
+                        width: auto;
+                        color: @white;
+                        font-size: 24px;
+                        line-height: 1.3;
+                        padding: 0px;
+                        margin-bottom: 0px;
+
+                        &:before, &:after {
+                            font-size: 70px;
+                            color: #3391c9;
+                            position: absolute;
+                            right: 0;
+                            left: 50%;
+                            -webkit-transform: translateX(-50%);
+                            transform: translateX(-50%);
+                            width: 30px;
+                            height: 40px;
+                        }
+                        &:before {
+                            content: '“';
+                            top: -50px;
+                        }
+                        &:after {
+                            content: '”';
+                            bottom: -35px;
+                        }
+                    }
+                }
+            }
+            
+            .author {
+                font-size: 13px;
+                text-transform: uppercase;
+                font-weight: 600;
+                letter-spacing: 0.05em;
+                margin-bottom: 10px;
+            }
+            .source {
+                color: @brand_light_blue;
+                letter-spacing: 0.05em;
+                font-size: 13px;
+            }
+        }
+    }
+       
+    .topic-header {
+        padding-left: 40px;
+        padding-right: 40px;
+        
+        .breadcrumbs {
+            padding: 20px 0px 70px 0px;
+        }   
+    }
+    
+    .slideshow-library {
+        .subtitle {
+            margin-bottom: 35px;
+        }
+    }
+    
+    .wrapper-leaderboard {
+        margin-bottom: 40px;
+        
+        .leaderboard {
+            text-align: center;
+            padding: 20px 10px;
+            background: @light_grey;
+            margin: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    
+    .sidebar {
+        .subscribe {
+            margin-top: 10px;
+            
+            h2, h3 {
+                color: @white;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+    .quotes-content {
+        .slideshow-wrapper {
+            .slide-image {
+                .wrapper {
+                    .pullquote {
+                        .quote-text {
+                            p {
+                                font-size: 24px;
+                                line-height: 1.2;
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+    
+@media (max-width: @screen-md-max) {
+    .quotes-content {
+        .quotes-form {
+            .form-footer {
+                display: block;
+                margin-top: 0px;
+
+                > div {
+                    display: block;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    width: 100%;
+
+                    &:first-child {
+                        padding-left: 15px;
+                    }
+                    &:last-child {
+                        padding-right: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-sm-max) {
+    .quotes-content {
+        .slideshow-wrapper {
+            .slide-image {
+                .wrapper {
+                    .pullquote {
+                        .quote-text {
+                            p {
+                                font-size: 18px;
+                                line-height: 1.1;
+                                margin-bottom: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+        .slideshow {
+            .carousel-control {
+                margin-top: -20px;
+                &.left {
+                    left: 10px;
+                }
+                &.right {
+                    right: 10px;
+                }
+                img {
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-xs-max) {
+    .quotes-content {
+        
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        
+        p, ul li {
+            font-size: 14px;
+        }
+        
+        .header-article {
+            padding-bottom: 0px;
+        }
+        
+        .topic-header {
+            padding-left: 15px;
+            
+            .breadcrumbs {
+                padding: 20px 0px 30px 0px;
+            }
+        }
+        
+        .quotes-form {
+            padding: 15px 20px;
+            margin-bottom: 40px;
+            
+            .title {
+                margin-top: 0px;
+            }
+            .description {
+                margin-bottom: 20px;
+            }
+        }
+        
+        .quotes-testimonial {
+            padding: 0px 0px 15px 0px;
+            
+            .pullquote {
+                .quote-text {
+                    width: 90%;
+                    margin: 0 auto 20px;
+
+                    .text-wrapper {
+                        p {
+                            font-size: 18px !important;
+                            line-height: 1.1 !important; 
+                        }
+                    }
+                }
+            }
+        }
+        
+        
+        .slideshow-wrapper {
+            .slide-image {
+                .wrapper {
+                    .pullquote {
+                        width: 85%;
+                        
+                        .quote {
+                            top: -30px;
+                            left: -5px;
+                        }
+                        
+                        .quote-text {
+                            p {
+                                font-size: 14px !important;
+                                line-height: 1 !important;
+                                margin-bottom: 10px;
+                                padding: 0px 15px;
+                            }
+                            .author {
+                                padding: 0px 15px;
+                                font-size: 11px;
+                                margin-bottom: 0px;
+                            }
+                            .place {
+                                margin-bottom: 5px;
+                                font-size: 11px;
+                            }
+                        }
+                        
+                        .share-quote {
+                            a.share-button {
+                                i {
+                                    width: 30px;
+                                    height: 30px;
+                                    font-size: 14px;
+                                    line-height: 1em;
+                                }
+                            }
+
+                            .social-wrapper {
+                                height: 30px;
+                                margin-left: 30px;
+
+                                a {
+                                    width: 30px;
+                                    height: 30px;
+                                    font-size: 14px;
+                                    line-height: 1em;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: @screen-xs) {
+    .quotes-content {
+        .slideshow {
+            .carousel-control {
+                margin-top: -20px;
+                &.left {
+                    left: 5px;
+                }
+                &.right {
+                    right: 5px;
+                }
+                img {
+                    width: 20px;
+                }
+            }
+        }
+        .slideshow-wrapper {
+            .slide-image {
+                .wrapper {
+                    .pullquote {                        
+                        .quote {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

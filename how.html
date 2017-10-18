@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Guideposts</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky-kit.min.js"></script>
+        <script src="js/jquery.appear.js"></script>
+        <script src="js/scripts.js"></script>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <!-- content -->
+                <div class="content col-sm-12 topic how">
+                    <div class="content-padding">
+                        <div class="topic-header">
+                            <div class="breadcrumbs">
+                                <a href="/" title="Home">Home</a>
+                                <a href="/" title="Guideposts Services">Guideposts Services</a>
+                                <span class="current">Our Prayer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-md-9 content-padding how-content">
+                        <div class="row">
+                            <div class="col-sm-12 how-top">
+                                <h1 class="how-title">GuidePosts Service: Our Prayer</h1>
+                                <p>Integer tristique vehicula rhoncus. Nam aliquet nisl placerat eleifend vulputate. Nulla facilisi. Nunc ultricies purus vel elit pharetra, in bibendum mi egestas. Aliquam eget fringilla lorem. Aenean id dapibus ante. Praesent dolor dolor, porta vel consectetur eget, porta id lectus. Aliquam lectus ipsum, pharetra et nibh ac, sollicitudin pellentesque erat. Curabitur ut consequat massa. </p>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="request-prayer-wrapper">
+                                    <div class="request-prayer">
+                                        <h2>May We Pray For You?</h2>
+                                        <button class="button white request-prayer-toggle">Request a Prayer</button>
+                                    </div>
+                                    <form class="quotes-form" id="guideposts-prayer-request-form" action="/" method="post">
+                                        <h2 class="title">May We Pray For You?</h2>
+                                        <p class="description">
+                                            Your prayer concerns are important to us and that´s why each and every prayer request we receive is prayed for by a trained volunteer by name and by need. Rest assured, our prayer support is confidential, free and available 24 hours a day, seven days a week.
+                                        </p>
+                                        <div class="row">
+                                                <div class="col-sm-6">
+                                                    <input type="text" name="firstname" placeholder="First Name">
+                                                </div>
+                                                <div class="col-sm-6">
+                                                    <select>
+                                                        <option value="">Select a Category</option>
+                                                        <option value="angel">Angel</option>
+                                                        <option value="bible">Bible</option>
+                                                        <option value="change">Change</option>
+                                                        <option value="creativity">Creativity</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-sm-12 form-type-textarea">
+                                                    <textarea rows="2" cols="50" placeholder="Please Type Your Prayer Request Here."></textarea>
+                                                </div>
+                                        </div>
+                                        <div class="form-footer row">
+                                            <div class="col-md-6"> 
+                                                <label for="make-public"><input type="checkbox" id="make-public" name="public" value="Public"> Make This Request Public</label>
+                                            </div>
+                                            <div class="col-md-6"> 
+                                                <label for="personal-prayer"><input type="checkbox" id="personal-prayer" name="prayer" value="Prayer"> I want a Personal Prayer Response</label>
+                                            </div>
+                                        </div>
+                                        <div id="edit-ppr-wrapper" class="form-footer row">
+                                            <div class="col-md-6"> 
+                                                <input type="text" name="email" placeholder="Enter Email">
+                                            </div>
+                                            <div class="col-md-6 form-type-radios"> 
+                                                <label class="control-label gender-label" for="edit-gender">Gender</label>
+
+                                                <div id="edit-gender" class="form-radios">
+                                                    <div class="radio"> 
+                                                        <label class="control-label" for="edit-gender-male"><input type="radio" id="edit-gender-male" name="gender" value="Male" class="form-radio">Male</label>
+                                                    </div>
+                                                    <div class="radio"> 
+                                                        <label class="control-label" for="edit-gender-female"><input type="radio" id="edit-gender-female" name="gender" value="Female" class="form-radio">Female</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-footer row">
+                                            <div class="col-md-6 text-center">
+                                                <button type="submit" class="button blue">Request Prayer</button>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <a href="#">Read Our Prayer Promise</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-12 slideshow-library">
+                                <div class="row header">
+                                    <div class="col-sm-10 column">
+                                        <h2 class="title">Other Ways You Can Get Involved</h2>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <p class="subtitle">Here are powerful prayer resources to help you feel the grace of God’s comfort and guidance.</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="library">
+                                            <picture class="img-responsive" title="Text a Prayer">
+                                                <img alt="Text a Prayer" srcset="images/library1.jpg">
+                                            </picture>
+                                            <div class="library-wrapper">
+                                                <div class="library-inner">
+                                                    <h3 class="title"><a href="#" title="Text a Prayer">Donec Finibus Nec </a></h3>
+                                                    <p class="text">Praesent libero arcu, placerat id tellus vel, vulputate facilisis ipsum. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="library">
+                                            <picture class="img-responsive" title="Text a Prayer">
+                                                <img alt="Text a Prayer" srcset="images/library2.jpg">
+                                            </picture>
+                                            <div class="library-wrapper">
+                                                <div class="library-inner">
+                                                    <h3 class="title"><a href="#" title="Text a Prayer">Vestibulum Ante Ipsum Primis</a></h3>
+                                                    <p class="text">Praesent libero arcu, placerat id tellus vel, vulputate facilisis ipsum. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="library">
+                                            <picture class="img-responsive" title="Text a Prayer">
+                                                <img alt="Text a Prayer" srcset="images/library3.jpg">
+                                            </picture>
+                                            <div class="library-wrapper">
+                                                <div class="library-inner">
+                                                    <h3 class="title"><a href="#" title="Text a Prayer">Sed Massa Purus, Sagittis Egestas Vel</a></h3>
+                                                    <p class="text">Praesent libero arcu, placerat id tellus vel, vulputate facilisis ipsum. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="library">
+                                            <picture class="img-responsive" title="Text a Prayer">
+                                                <img alt="Text a Prayer" srcset="images/library4.jpg">
+                                            </picture>
+                                            <div class="library-wrapper">
+                                                <div class="library-inner">
+                                                    <h3 class="title"><a href="#" title="Text a Prayer">Cras Sagittis Risus Non Mattis Auctor</a></h3>
+                                                    <p class="text">Praesent libero arcu, placerat id tellus vel, vulputate facilisis ipsum. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12 how-news">
+                                <div class="row header">
+                                    <div class="col-sm-12">
+                                        <h2 class="title">Stories, News, and Events</h2>
+                                    </div>
+                                </div>
+                                <div class="wrapper-post row">
+                                    <div class="inner-post col-sm-12">
+                                        <div class="post row">
+                                            <div class="image col-xs-12 col-sm-5 col-lg-4">
+                                                <picture class="img-responsive" title="Rio 2016: Boxer Shakur Stevenson Is Ready for Gold">
+                                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                    <source media="(min-width: 1301px)" srcset="images/post7.png"></source>
+                                                    <!--[if IE 9]></video><![endif]-->
+                                                    <img title="Rio 2016: Boxer Shakur Stevenson Is Ready for Gold" alt="Rio 2016: Boxer Shakur Stevenson Is Ready for Gold" srcset="images/img-post-square/post7-square.png" class="img-responsive">
+                                                </picture>
+                                            </div>
+                                            <div class="text col-xs-12 col-sm-7 col-lg-8">
+                                                <a href="#" class="category" title="faith &amp; prayer">faith &amp; prayer</a>
+                                                <h2 class="title"><a href="#" title="Rio 2016: Boxer Shakur Stevenson Is Ready for Gold">Rio 2016: Boxer Shakur Stevenson Is Ready for Gold</a></h2>
+                                                <p>Phasellus auctor augue et neque tincidunt, id tristique velit condimentum. Proin odio lectus, euismod icondimentum.</p>
+                                                <div class="more-copy"></div>
+                                                <span class="continue-reading" style="display: none;">Continue reading</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inner-post col-sm-12">
+                                        <div class="post row">
+                                            <div class="image col-xs-12 col-sm-5 col-lg-4">
+                                                <picture class="img-responsive" title="Rio 2016: How Danell Leyva Is Continuing A Legacy">
+                                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                    <source media="(min-width: 1301px)" srcset="images/post8.png"></source>
+                                                    <!--[if IE 9]></video><![endif]-->
+                                                    <img title="Rio 2016: How Danell Leyva Is Continuing A Legacy" alt="Rio 2016: How Danell Leyva Is Continuing A Legacy" srcset="images/img-post-square/post8-square.png" class="img-responsive">
+                                                </picture>
+                                            </div>
+                                            <div class="text col-xs-12 col-sm-7 col-lg-8">
+                                                <a href="#" class="category" title="POSITIVE LIVING">POSITIVE LIVING</a>
+                                                <h2 class="title"><a href="#" title="Rio 2016: How Danell Leyva Is Continuing A Legacy">Rio 2016: How Danell Leyva Is Continuing A Legacy</a></h2>
+                                                <p>Phasellus auctor augue et neque tincidunt, id tristique velit condimentum. Proin odio lectus, euismod icondimentum.</p>
+                                                <div class="more-copy"></div>
+                                                <span class="continue-reading" style="display: none;">Continue reading</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inner-post col-sm-12">
+                                        <div class="post row">
+                                            <div class="image col-xs-12 col-sm-5 col-lg-4">
+                                                <picture class="img-responsive" title="What’s the Aramaic Word for Love?">
+                                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                    <source media="(min-width: 1301px)" srcset="images/post9.png"></source>
+                                                    <!--[if IE 9]></video><![endif]-->
+                                                    <img title="What’s the Aramaic Word for Love?" alt="What’s the Aramaic Word for Love?" srcset="images/img-post-square/post9-square.png" class="img-responsive">
+                                                </picture>
+                                            </div>
+                                            <div class="text col-xs-12 col-sm-7 col-lg-8">
+                                                <a href="#" class="category" title="POSITIVE LIVING">POSITIVE LIVING</a>
+                                                <h2 class="title"><a href="#" title="What’s the Aramaic Word for Love?">What’s the Aramaic Word for Love?</a></h2>
+                                                <p>Phasellus auctor augue et neque tincidunt, id tristique velit condimentum. Proin odio lectus, euismod icondimentum.</p>
+                                                <div class="more-copy"></div>
+                                                <span class="continue-reading" style="display: none;">Continue reading</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="inner-post col-sm-12">
+                                        <div class="post row">
+                                            <div class="image col-xs-12 col-sm-5 col-lg-4">
+                                                <picture class="img-responsive" title="Florida Artist Gives Everyone a Chance to Be an Angel">
+                                                    <!--[if IE 9]><video style="display: none;"><![endif]-->
+                                                    <source media="(min-width: 1301px)" srcset="images/post10.png"></source>
+                                                    <!--[if IE 9]></video><![endif]-->
+                                                    <img title="Florida Artist Gives Everyone a Chance to Be an Angel" alt="Florida Artist Gives Everyone a Chance to Be an Angel" srcset="images/img-post-square/post10-square.png" class="img-responsive">
+                                                </picture>
+                                            </div>
+                                            <div class="text col-xs-12 col-sm-7 col-lg-8">
+                                                <a href="#" class="category" title="POSITIVE LIVING">POSITIVE LIVING</a>
+                                                <h2 class="title"><a href="#" title="Florida Artist Gives Everyone a Chance to Be an Angel">Florida Artist Gives Everyone a Chance to Be an Angel</a></h2>
+                                                <p>Phasellus auctor augue et neque tincidunt, id tristique velit condimentum. Proin odio lectus, euismod icondimentum.</p>
+                                                <div class="more-copy"></div>
+                                                <span class="continue-reading" style="display: none;">Continue reading</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="service-updates">
+                                    <form class="updates-form" id="guideposts-service-updates-form" action="/" method="post">
+                                        <div class="row">
+                                            <div class="col-md-5"> 
+                                                <h3>Get updates for Service:</h3>
+                                            </div>
+                                            <div class="col-md-3"> 
+                                                <input type="email" name="email" placeholder="Your Email Address">
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button type="submit" class="button white">Submit Email</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-sm-4 col-md-3 sticky-sidebar">
+                        <div class="sidebar">
+                            <div class="video">
+                                <a href="#" title="Tearoom Mysteries from Guideposts Books" class="video-cover"></a>
+                                <div class="video-inner">
+                                    <a href="#" title="Tearoom Mysteries from Guideposts Books">Tearoom Mysteries from Guideposts Books</a>
+                                </div>
+                            </div>
+                            <div class="inspirational-quote">
+                                <div id="carousel-quotes" class="carousel slide sidebar-quote" data-ride="carousel-quotes">
+                                   <div class="title">                                
+                                        <h3>TESTIMONIALS</h3>
+                                        <div class="controls">
+                                            <a class="left carousel-control" href="#carousel-quotes" role="button" data-slide="prev"><i class="fa fa-chevron-left" aria-hidden="true"></i><span class="sr-only">Prev</span></a>
+                                            <a class="right carousel-control" href="#carousel-quotes" role="button" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a>
+                                        </div>
+                                    </div>
+                                   <div class="quote-inner carousel-inner" role="listbox">
+                                        <div class="item active">
+                                             <div class="content-quote">
+                                                <img src="images/icons/icon2.png" alt="icon2">
+                                                <p>Duis interdum nec orci sit amet ultrices. Maecenas elementum mauris eget imperdiet bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Mauris feugiat libero vitae ligula fringilla, eu iaculis arcu tincidunt.</p>
+                                                <img src="images/icons/icon1.png" alt="icon1">
+                                             </div>
+                                             <div class="author">
+                                                <h3>John Smith</h3>
+                                                <p>Chicago, IL</p>
+                                             </div>
+                                        </div>
+                                        <div class="item">
+                                            <div class="content-quote">
+                                               <img src="images/icons/icon2.png" alt="icon2">
+                                               <p>Duis interdum nec orci sit amet ultrices.</p>
+                                               <img src="images/icons/icon1.png" alt="icon1">
+                                            </div>
+                                            <div class="author">
+                                               <h3>John</h3>
+                                               <p>Chicago</p>
+                                            </div>
+                                       </div>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content end -->
+                
+                <!-- fixed-share -->
+                <div class="social-share">
+                    <div class="wrapper">
+                        <ul class="social-menu">
+                            <li><a href="https://pinterest.com/guideposts/"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.facebook.com/guideposts"><i class="fa fa-facebook-f" aria-hidden="true"></i></a></li>
+                            <li><a href="https://twitter.com/guideposts"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="https://plus.google.com/+guideposts"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                        </ul>
+                        <a class="open-socials" href="#">
+                            <i class="fa fa-share-alt" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- fixed-share end -->
+                
+            </div>            
+        </div>
+
+        <div class="footer footer-center">
+            <div class="blue-bg">
+                <div class="container-fluid topic">
+                    <div class="subfooter row">
+                        <div class="col-sm-12">
+                            <p><strong>Did you know?</strong>  Guideposts is a non-profit. Help us change lives.</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <a class="button-footer" href="#" title="Donate today">Donate today</a>
+                            <a class="button-footer" href="#" title="Learn more">Learn more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
