@@ -52,6 +52,14 @@ jQuery(document).ready(function(){
     $('.slideshow-body .carousel[id^="carousel-top-"], .media .carousel-bottom-text .carousel[id^="carousel-top-"]').on('slide.bs.carousel', function(e){
         $(this).siblings('[id^="carousel-bottom-"]').carousel(e.direction == 'left' ? 'next' : 'prev');
     });
+
+    $('#carousel .show-grid').on('click', function() {
+        $('#carousel .slide-type .slide-view').addClass('hide');
+        $('#carousel .slide-type .grid-view').stop().fadeIn(1200).removeClass('hide');
+        console.log("SHOW GRID");
+    });
+
+    // Slideshow end
     
     // Index, Brand-series, Topic
     $('.content .post').hover(function(){

@@ -247,38 +247,157 @@
 }
 
 .slideshow-wrapper.default-view {
-	.carousel-control-wrapper {
-		position: absolute;
-		width: 100%;
-		
-		a {
-			display: block;
-			height: 10%;
-		}
-	}
+    width: auto;
+    .carousel {
 
+        .slide-type {
+            .slide-view {
+                .slide-view-image {
+                    width: 70%;
+                    float: right;
 
-	.image-article {
-		width: 70%;
-	}
+                    .carousel-control-wrapper {
+                        position: relative;
+                        width: 100%;
+                        height: 60px;
+                        background: rgb(255, 255, 255);
 
-	.slideshow-texts {
-		width: 25%;
-	}
+                        &.up {
+                            top: 0;
+                        }
 
-	.left {
-		float: left;
-		left: 0;
-		margin: 0 auto 0 0;
-	}
-	.right {
-		float: right;
-		right: 0;
-		margin: 0 0 0 auto;
-	}
+                        &.down {
+                            bottom: 0;
+                        }
 
-	.up { top: 0; }
-	.down { bottom: 0; }
+                        div {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            //float: left;
+                            height: 50%;
+                        }
+
+                        .slide-left-control {
+                            left: 0;
+
+                            a {
+                                span {
+                                    color: #c0c0c0;
+                                }
+                            }
+                        }
+
+                        .carousel-center-control {
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            
+                            ul {
+                                list-style: none;
+                                margin: 0;
+                                padding: 0;
+
+                                li {
+                                    float: left;
+                                    color: #c0c0c0;
+
+                                    &:nth-child(2) {
+                                        &:before, &:after {
+                                            content: "|";
+                                            margin: 0 .5em;
+                                        }
+                                    }
+
+                                    a {
+                                        color: #c0c0c0;
+                                        &:hover {
+                                            text-decoration: none;
+                                        }
+
+                                        span {
+                                            margin: 0 .5em
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        .slide-right-control {
+                            right: 0;
+
+                            a {
+                                span {
+                                    color: #c0c0c0;
+                                }
+                            }
+                        }   
+                    }
+                }
+            }
+
+            .grid-view {
+                overflow: hidden;
+                margin-bottom: 15px;
+                position: relative;
+
+                .grid-item {
+                    width: 18%;
+                    padding-bottom: 18%;
+                    position: relative;
+                    position: relative;
+                    float: left;
+                    margin-left: 20px;
+                    margin-top: 20px;
+
+                    &:hover {
+                        .hover-grid {display: block;cursor: pointer;}    
+                    }
+                    
+                    img {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .hover-grid{
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        background-color: rgba(30,144,255,0.65);
+                        display: none;
+
+                        p {
+                            position: absolute;
+                            width: 100%;
+                            text-align: center;
+                            margin-top: 50%;
+                            transform: translateY(-50%);
+                            color: white !important;
+                            font-size: 2em;
+                            cursor: pointer;
+                        }
+                    }
+                }                
+            }
+        }
+
+        .content {
+            float: left;
+            width: 30%;
+            padding: 0 1em 0 0;
+        }
+
+        .slide-socials {
+            position: absolute;
+            bottom: 0;
+
+            .share-text {
+                margin: .5em 0;
+            }
+
+            .share-icons {}
+        }
+    }
 }
 
 .slideshow-bottom {
