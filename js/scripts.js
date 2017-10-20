@@ -49,14 +49,35 @@ jQuery(document).ready(function(){
 
     
     // Slideshow
-    $('.slideshow-body .carousel[id^="carousel-top-"], .media .carousel-bottom-text .carousel[id^="carousel-top-"]').on('slide.bs.carousel', function(e){
+    /*$('.slideshow-body .carousel[id^="carousel-top-"], .media .carousel-bottom-text .carousel[id^="carousel-top-"]').on('slide.bs.carousel', function(e){
         $(this).siblings('[id^="carousel-bottom-"]').carousel(e.direction == 'left' ? 'next' : 'prev');
+    });*/
+
+    $('#carousel a').on('click', function(e) {
+        switch(e.currentTarget.className) {
+            case 'show-grid':
+                $('#carousel > div').addClass('hide');
+                $('#carousel .grid-view').stop().fadeIn(1200).removeClass('hide');
+                break;
+            case 'show-list':
+                $('#carousel > div').addClass('hide');
+                $('#carousel .list-view').stop().fadeIn(1200).removeClass('hide');
+                break;
+            case 'show-slide':
+                $('#carousel > div').addClass('hide');
+                $('#carousel .slide-view').stop().fadeIn(1200).removeClass('hide');
+                break;
+            default: break;
+        }
     });
 
-    $('#carousel .show-grid').on('click', function() {
-        $('#carousel .slide-type .slide-view').addClass('hide');
-        $('#carousel .slide-type .grid-view').stop().fadeIn(1200).removeClass('hide');
-        console.log("SHOW GRID");
+    $('#carousel > .grid-view > .grid-item a').on('click', function(e) {
+        var num = e.currentTarget.dataset.num - 1;
+        
+        $('#carousel > div').addClass('hide');
+        $('#carousel .slide-view').stop().fadeIn(1200).removeClass('hide');
+        $('#carousel .slide-view .item').removeClass('active');
+        $('#carousel > div.slide-view .item').eq(num).addClass('active');
     });
 
     // Slideshow end
