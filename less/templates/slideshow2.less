@@ -9,12 +9,13 @@
     
     .topic-header {
         .breadcrumbs {
-            padding: 20px 0px 70px 0px;
+            padding: 20px 0; //20px 0px 70px 0px;
         }
                 
         h1 {
             padding-bottom: 0px;
-            margin-bottom: 20px;
+            //margin-bottom: 20px;
+            margin: 0.67em 0;
         }
     }
     
@@ -51,7 +52,7 @@
                     font-size: 35px;
                     letter-spacing: -1px;
                     color: @black;
-                    margin-bottom: 20px;
+                    //margin-bottom: 20px;
                 }
             }
         }
@@ -259,8 +260,9 @@
             		overflow: hidden;
             	
             		.slide-view-image {
-	                    width: 70%;
+	                    width: 75%;
 	                    float: right;
+                        margin: 0 0 0 3em;
 
 	                    .slide-control-wrapper {
 	                        position: relative;
@@ -286,16 +288,17 @@
 
 	                        .slide-left-control {
 	                            left: 0;
+                                top: 0;
+                                height: 60px;
+                                transform: translateY(0);
 
 	                            a {
-	                            	opacity: .75;
+	                            	display: block;
 
-                                    &:hover {
-                                    	opacity: 1;
-                                    }
-
-	                                span {
-	                                    color: #c0c0c0;
+	                                i {
+                                        font-size: 3em;
+	                                    color: #939393;
+                                        line-height: inherit;
 	                                }
 	                            }
 	                        }
@@ -311,15 +314,17 @@
 
 	                                li {
 	                                    float: left;
-	                                    color: #c0c0c0;
-	                                    font-size: .95vw;
-	                                    opacity: .75;
+	                                    color: #939393;
+	                                    font-size: 14px;
+	                                    //opacity: .75;
 
 	                                    &:hover {
 	                                    	opacity: 1;
 	                                    }
 
 	                                    &:nth-child(2) {
+                                            font-weight: bold;
+
 	                                        &:before, &:after {
 	                                            content: "|";
 	                                            margin: 0 .5em;
@@ -327,12 +332,12 @@
 	                                    }
 
 	                                    a {
-	                                        color: #c0c0c0;
+	                                        color: #939393;
 	                                        &:hover {
 	                                            text-decoration: none;
 	                                        }
 
-	                                        span {
+	                                        i {
 	                                            margin: 0 .5em
 	                                        }
 	                                    }
@@ -342,16 +347,17 @@
 
 	                        .slide-right-control {
 	                            right: 0;
+                                top: 0;
+                                height: 60px;
+                                transform: translateY(0);
 
 	                            a {
-	                            	opacity: .75;
+	                            	display: block;
 
-                                    &:hover {
-                                    	opacity: 1;
-                                    }
-
-	                                span {
-	                                    color: #c0c0c0;
+	                                i {
+                                        font-size: 3em;
+	                                    color: #939393;
+                                        line-height: inherit;
 	                                }
 	                            }
 	                        }   
@@ -360,43 +366,58 @@
 
 	                .content {
 			            float: left;
-			            width: 30%;
-			            padding: 0 1em 0 0;
+			            width: calc(25% - 5em);
+			            //padding: 0 1em 0 0;
+
+                        p {
+                            font-size: 16px;
+                        }
 			        }
 
 			        .slide-socials {
 			            position: absolute;
-			            bottom: 0;
+			            bottom: 60px; //0;
 
 			            .share-text {
 			                margin: .5em 0;
 			            }
 
-			            .share-icons {}
+			            .share-icons {
+                            margin: 0;
+
+                            .social-menu {                          
+                                li {                                
+                                    i {
+                                        padding: 8px;
+                                        width: 30px;
+                                        height: 30px;
+                                        font-size: 14px;
+                                        margin-right: 5px;
+                                    }
+                                }
+                            }
+                        }
 			        }
             	}
-            	
-                .slideshow-bottom {
-                	//position: absolute;
-                	//bottom: 0;
-                	margin:	0;
-                }
             }
 
             .grid-view {
                 overflow: hidden;
-                margin-bottom: 15px;
+                padding: 40px 40px 20px 40px;
+                //margin-bottom: 15px;
                 position: relative;
                 background: #fafafa;
 
                 .grid-item {
-                    width: calc(100% / 6);
-                    padding-bottom: 18%;
-                    position: relative;
+                    width: 150px; //calc((100% / 5) - 20px);
+                    height: 150px; //calc(100% / 4);
+                    //padding-bottom: 18%;
+                    //position: relative;
                     position: relative;
                     float: left;
-                    margin-left: 20px;
-                    margin-top: 20px;
+                    margin: 0 10px 10px 10px;
+                    //margin-left: 20px;
+                    //margin-top: 20px;
 
                     &:hover {
                         .hover-grid { display: block; }    
@@ -436,7 +457,7 @@
                 }
 
                 .grid-control-wrapper {
-                	padding: 1em 0 0 0;
+                	padding: 20px 0 0 0;
                 	clear: both;
 
                 	ul {
@@ -511,7 +532,13 @@
 }
 
 .slideshow-bottom {
-    margin-bottom: 100px;
+    margin: 50px 0;
+
+    .share-button {
+        i {
+
+        }
+    }
     
     .tags-wrapper {
         .tags {
@@ -527,6 +554,12 @@
                 }
             }
         }
+    }
+
+    .line-right {
+        position: absolute;
+        right: 0;
+        float: right;
     }
     
 }
@@ -677,10 +710,10 @@
 	        				.social-menu {        					
 	        					li {        						
 	        						i {
-	        							padding: 9px;
+	        							padding: 8px;
 	        							width: 30px;
 	        							height: 30px;
-	        							font-size: 12px;
+	        							font-size: 14px;
 	        							margin-right: 5px;
 	        						}
 	        					}
