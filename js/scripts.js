@@ -57,14 +57,19 @@ jQuery(document).ready(function(){
         switch(e.currentTarget.className) {
             case 'show-grid':
                 $('#carousel > div').addClass('hide');
+                if($('#carousel .slide-view').hasClass('list-view'))
+                    $('#carousel .slide-view').removeClass('list-view');
                 $('#carousel .grid-view').stop().fadeIn(1200).removeClass('hide');
                 break;
             case 'show-list':
                 $('#carousel > div').addClass('hide');
-                $('#carousel .list-view').stop().fadeIn(1200).removeClass('hide');
+                $('#carousel .slide-view').stop().fadeIn(1200).addClass('list-view');
                 break;
             case 'show-slide':
                 $('#carousel > div').addClass('hide');
+                if($('#carousel .slide-view').hasClass('list-view'))
+                    $('#carousel .slide-view').removeClass('list-view');
+
                 $('#carousel .slide-view').stop().fadeIn(1200).removeClass('hide');
                 break;
             default: break;
@@ -138,13 +143,13 @@ jQuery(document).ready(function(){
     
     // Index, Node, Slideshow, Topic, Video
     if ($(window).width() > 768) {
-        $('.sticky-sidebar').each(function(){
+        /*$('.sticky-sidebar').each(function(){
             $(this).children('div').stick_in_parent({
                 parent: $(this).parent(),
                 recalc_every: 1000
                 //inner_scrolling: false
             });
-        });
+        });*/
     }
     
     // Node, Slideshow, Video

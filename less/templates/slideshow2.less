@@ -35,6 +35,8 @@
         padding: 0px;
         
         .content-padding {
+            padding-right: 30px;
+
             p {
                 color: @slide_par;
                 line-height: 1.5;
@@ -249,12 +251,79 @@
 
 .slideshow-wrapper.default-view {
     width: auto;
+    
+    .image-article {
+        padding-top: 30px;
+    }
+
     #carousel {
 
         &.slide-type {
 
             .slide-view {
             	position: relative;
+
+                &.list-view {
+                    display: block !important;
+                    overflow: visible;
+
+                    .list-view-controls {
+                        position: absolute;
+                        top: -30px;
+                        display: block !important;
+
+                        ul {
+                            list-style: none;
+                            margin: 0;
+                            padding: 0;
+                            
+                            li {
+                                float: left;
+                                margin: 0 .5em 0 0;
+
+                                a {
+                                    color: #929292;
+
+                                    i {
+                                        margin: 0 .5em 0 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .item {
+                        .slide-view-image {
+                            width: 30%;
+                            float: left;
+                            margin: 0 1em 0 0;
+
+                            .slide-control-wrapper { display: none; }
+                        }
+
+                        .content {
+                            width: 50%;
+
+                            .carousel-text {
+                                    white-space: nowrap;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: block;
+                                    width: inherit;
+                            }
+                        }
+
+                        .slide-socials {
+                            left: calc(30% + 1em);
+                            bottom: 1em;
+                        }
+                    }
+
+                }
+
+                .list-view-controls {
+                    display: none;
+                }
 
             	.item {
             		overflow: hidden;
@@ -305,7 +374,8 @@
 
 	                        .slide-center-control {
 	                            left: 50%;
-	                            transform: translate(-50%, -50%);
+                                top: 0;
+	                            transform: translate(-50%, 0);
 	                            
 	                            ul {
 	                                list-style: none;
@@ -316,6 +386,8 @@
 	                                    float: left;
 	                                    color: #939393;
 	                                    font-size: 14px;
+                                        display: inline-block;
+                                        line-height: 60px;
 	                                    //opacity: .75;
 
 	                                    &:hover {
@@ -338,7 +410,8 @@
 	                                        }
 
 	                                        i {
-	                                            margin: 0 .5em
+	                                            margin: 0 .5em;
+                                                font-size: 12px;
 	                                        }
 	                                    }
 	                                }
@@ -366,7 +439,7 @@
 
 	                .content {
 			            float: left;
-			            width: calc(25% - 5em);
+			            width: 19%;
 			            //padding: 0 1em 0 0;
 
                         p {
@@ -404,20 +477,20 @@
             .grid-view {
                 overflow: hidden;
                 padding: 40px 40px 20px 40px;
-                //margin-bottom: 15px;
                 position: relative;
                 background: #fafafa;
 
+                div {
+                    -webkit-column-count: 5;
+                    column-count: 5;
+                }
+
                 .grid-item {
-                    width: 150px; //calc((100% / 5) - 20px);
-                    height: 150px; //calc(100% / 4);
-                    //padding-bottom: 18%;
-                    //position: relative;
+                    width: 100%;
+                    padding-top: 100%;
                     position: relative;
-                    float: left;
-                    margin: 0 10px 10px 10px;
-                    //margin-left: 20px;
-                    //margin-top: 20px;
+                    transform: translate3d(0, 0, 0);
+                    margin: 0 0 10px 0;
 
                     &:hover {
                         .hover-grid { display: block; }    
@@ -425,6 +498,7 @@
                     
                     img {
                         position: absolute;
+                        top: 0;
                         width: 100%;
                         height: 100%;
                     }
@@ -433,6 +507,7 @@
                         width: 100%;
                         height: 100%;
                         position: absolute;
+                        top: 0;
                         background-color: rgba(30,144,255,0.65);
                         display: none;
 
@@ -462,11 +537,13 @@
 
                 	ul {
                 		list-style: none;
+                        margin: 0;
+                        padding: 0;
 
                 		li {
                 			float: left;
                 			margin: 0 1em 0 0;
-                			opacity: .75;
+                			//opacity: .75;
 
                             &:hover {
                             	opacity: 1;
@@ -474,14 +551,15 @@
                 		
                 			a {
                 				color: #c0c0c0;
-                				font-size: .95vw;
+                				font-size: 14px;
 
                 				&:hover {
                 					text-decoration: none;
                 				}
 
-                				span {
-                					margin: 0 .5em;
+                				i {
+                					margin: 0 .5em 0 0;
+                                    font-size: 14px;
                 				}
                 			}
                 		}
@@ -489,7 +567,7 @@
                 }           
             }
 
-            .list-view {
+            /*.list-view {
             	background: #fafafa;
 
                 .list-view-item {
@@ -526,7 +604,7 @@
                         }
                     }
                 }
-            }
+            }*/
         }
     }
 }
@@ -699,6 +777,12 @@
     }
 }
 
+.sticky-sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
 @media (max-width: @screen-sm-max) {
 	#carousel {
 		&.slide-type {
@@ -814,6 +898,7 @@
     }
     
     .image-article {
+        //padding-top: 30px;
         .carousel-control {
             margin-top: -20px;
             &.left {
@@ -899,6 +984,10 @@
                 }
             }
         }
+    }
+
+    .sticky-sidebar {
+        position: static;
     }
 }
 
@@ -1031,5 +1120,9 @@
                 }
             }
         }
+    }
+
+    .sticky-sidebar {
+        position: static;
     }
 }
