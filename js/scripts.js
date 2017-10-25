@@ -141,8 +141,24 @@ jQuery(document).ready(function(){
         return false;
     });
     
+
+    //Sidebar
+    $(window).scroll(function (e) {
+        console.log('scrolling');
+        console.log($(this).scrollTop());
+        console.log($(document).height() - 200);
+        
+        if ($(this).scrollTop() < $(document).height()) {
+            console.log('position absolute');
+            $('.sticky-sidebar').css({ position: 'absolute', bottom: 200 });
+        } else {
+            console.log('position fixed');
+            $('.sticky-sidebar').css({ position: 'fixed', top: 0 });
+        }
+    });
+
     // Index, Node, Slideshow, Topic, Video
-    if ($(window).width() > 768) {
+    //if ($(window).width() > 768) {
         /*$('.sticky-sidebar').each(function(){
             $(this).children('div').stick_in_parent({
                 parent: $(this).parent(),
@@ -150,7 +166,7 @@ jQuery(document).ready(function(){
                 //inner_scrolling: false
             });
         });*/
-    }
+    //}
     
     // Node, Slideshow, Video
     $('.share-quote .share-button').click(function (e) {

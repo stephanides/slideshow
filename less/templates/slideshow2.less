@@ -253,10 +253,14 @@
     width: auto;
     
     .image-article {
+        overflow: visible;
         padding-top: 30px;
     }
 
     #carousel {
+        .carousel-inner {
+            overflow: visible;
+        }
 
         &.slide-type {
 
@@ -293,28 +297,31 @@
                     }
 
                     .item {
+                        position: relative;
+
                         .slide-view-image {
-                            width: 30%;
+                            width: 33%;
                             float: left;
-                            margin: 0 1em 0 0;
+                            //margin: 0 1em 0 0;
 
                             .slide-control-wrapper { display: none; }
                         }
 
-                        .content {
-                            width: 50%;
+                        .slide-content {
+                            width: 65%;
 
                             .carousel-text {
-                                    white-space: nowrap;
+                                    //white-space: nowrap;
                                     overflow: hidden;
-                                    text-overflow: ellipsis;
-                                    display: block;
-                                    width: inherit;
+                                    //text-overflow: ellipsis;
+                                    //display: block;
+                                    //width: inherit;
                             }
                         }
 
                         .slide-socials {
-                            left: calc(30% + 1em);
+                            position: static !important;
+                            float: left;
                             bottom: 1em;
                         }
                     }
@@ -326,12 +333,12 @@
                 }
 
             	.item {
-            		overflow: hidden;
+            		//overflow: hidden;
             	
             		.slide-view-image {
-	                    width: 75%;
+	                    //width: 75%;
 	                    float: right;
-                        margin: 0 0 0 3em;
+                        //margin: 0 0 0 3em;
 
 	                    .slide-control-wrapper {
 	                        position: relative;
@@ -381,9 +388,10 @@
 	                                list-style: none;
 	                                margin: 0;
 	                                padding: 0;
+                                    white-space: nowrap;
 
 	                                li {
-	                                    float: left;
+	                                    //float: left;
 	                                    color: #939393;
 	                                    font-size: 14px;
                                         display: inline-block;
@@ -437,9 +445,9 @@
 	                    }
 	                }
 
-	                .content {
+	                .slide-content {
 			            float: left;
-			            width: 19%;
+			            //width: 19%;
 			            //padding: 0 1em 0 0;
 
                         p {
@@ -450,6 +458,7 @@
 			        .slide-socials {
 			            position: absolute;
 			            bottom: 60px; //0;
+                        padding: 0 15px;
 
 			            .share-text {
 			                margin: .5em 0;
@@ -781,12 +790,36 @@
     position: fixed;
     right: 0;
     top: 0;
+
+    &.stick {
+        position: static;
+    }
 }
 
 @media (max-width: @screen-sm-max) {
 	#carousel {
-		&.slide-type {
+		//&.slide-type {
 			.slide-view {
+                .item {
+                    .slide-control-wrapper {
+                        .slide-center-control {
+                            ul {
+                                li {
+                                    font-size: 10px !important;
+                                }
+                            }
+                        }
+                    }
+
+                    .slide-socials {
+                        position: static !important;
+                        display: inline-block;
+                        width: 100%;
+                        clear: both;
+                        padding: 0 15px;
+                    }
+                }
+
 				&.col-md-12 {
 	        			overflow: hidden;
 
@@ -804,19 +837,25 @@
 	        				}
 	        			}
 	        	}
+
+                .slideshow-bottom {
+                    .line-right {
+                        position: static;
+                    }
+                }
 			}
 
 			.list-view{
-                picture {
+                /*picture {
                     height: 200px;
                     display: block;
-                }
+                }*/
 
                 img {
-                    position: relative;
+                    /*position: relative;
                     width: 50%;
                     float: left;
-                    height: 150px;
+                    height: 150px;*/
                 }
 
                 .list-view-text{
@@ -849,7 +888,7 @@
                     padding:4px !important;
                 }
             }
-		}
+		//}
 	}
 
     .slideshow-wrapper {
@@ -890,7 +929,9 @@
     }
     
     .slideshow-body {
-        .slideshow-bottom {           
+
+        .slideshow-bottom {   
+
             .share-quote {
                 margin-top: 20px;
             }
@@ -918,17 +959,17 @@
 @media (max-width: @screen-sm-max) and (min-width: @screen-sm-min) { 
 	#carousel {
 		&.slide-type {
-			.list-view{
-                picture {
+			.list-view {
+                /*picture {
                     height: 200px;
                     display: block;
-                }
+                }*/
 
                 img {
-                    position: relative;
+                    /*position: relative;
                     width: 50%;
                     float: left;
-                    height: 150px;
+                    height: 150px;*/
                 }
 
                 .list-view-text {
@@ -993,18 +1034,18 @@
 
 @media (max-width: @screen-sm-min){
 	#carousel {
-		&.slide-type {
+        &.slide-type {
 			.list-view {
-                picture {
+                /*picture {
                     height: 200px;
                     display: block;
-                }
+                }*/
 
                 img {
-                    position: relative;
+                    /*position: relative;
                     width: 50%;
                     float: left;
-                    height: 150px;
+                    height: 150px;*/
                 }
 
                 .list-view-text {
